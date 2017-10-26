@@ -2,14 +2,14 @@ package EmployeeProject;
 
 public class Employee {
 
-    public String fullName;
-    public double monthlySalary;
-    public static int year = 12;
+    protected String fullName;
+    protected double monthlySalary;
+    protected static int year = 12;
 
     // TODO: A constructor that allows the name and monthly salary to be initialized
-    public Employee(String name, double mSalary) {
-        fullName = name;
-        monthlySalary = mSalary;
+    public Employee(String fullName, double monthlySalary) {
+        this.fullName = fullName;
+        this.monthlySalary = monthlySalary;
     }
 
     // TODO: A method named annualSalary that returns the salary for a whole year.

@@ -2,7 +2,8 @@ package EmployeeProject;
 
 public class Salesman extends Employee {
 
-    private static double commissionRate = 0.02;
+    private static final double commissionRate = 0.02;
+    private static final double commissionCap = 20000;
     private double annualSales;
 
     // TODO: A constructor that allows the name, monthly salary and annual sales to be initialized.
@@ -17,8 +18,9 @@ public class Salesman extends Employee {
     public double annualSalary() {
         double salesCommission = annualSales * commissionRate;
 
-        if (salesCommission > 20000)
-            salesCommission = 20000;
+        if (salesCommission > commissionCap) {
+            salesCommission = commissionCap;
+        }
 
         return (year * monthlySalary) + salesCommission;
     }
